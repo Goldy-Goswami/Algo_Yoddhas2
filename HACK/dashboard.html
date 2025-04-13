@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Growra Dashboard</title>
+  <link rel="stylesheet" href="/assets/style/dashoard.css" />
+</head>
+<body class="dark">
+  <header>
+    <h1>🌱 Growra Dashboard</h1>
+    <button id="toggle-theme">DARK MODE</button>
+  </header>
+
+  <main>
+    <a href="/study_tracker.html"> 
+    <section class="card" id="routine-tracker">
+      <h2>📚 Daily Study Routine Tracker</h2>
+      <p>Track your daily study schedule, stay consistent & boost your productivity!</p>
+    </section>
+  </a>
+
+  <a href="/Mind.html"> 
+    <section class="card" id="mindfulness-prompt">
+      <h2>🧘 Mindfulness Prompt</h2>
+      <p>Take a deep breath and reflect. A fresh prompt each day to calm your mind.</p>
+    </section>
+  </a>
+
+
+  <a href="/Motivation.html">
+    <section class="card" id="motivational-reminder">
+      <h2>💡 Motivational Reminder</h2>
+      <p>Get personalized motivational quotes to keep you going!</p>
+    </section>
+  </a>
+
+  <a href="/target.html"> 
+    <section class="card" id="target-setting">
+      <h2>🎯 Target Setting</h2>
+      <p>Set daily or weekly targets to stay on top of your goals.</p>
+    </section>
+  </a>
+
+  <a href="/to-do-list.html">
+      <section class="card" id="todo-list">
+      <h2>✅ To-Do List</h2>
+      <p>Keep track of your tasks, check 'em off one by one!</p>
+    </section>
+  </a>  
+  </main>
+
+  <script>
+  const toggleBtn = document.getElementById("toggle-theme");
+    const body = document.body;
+    
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("light");
+      body.classList.toggle("dark");
+    });
+    </script>
+</body>
+</html>

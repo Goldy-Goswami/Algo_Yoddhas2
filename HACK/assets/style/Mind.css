@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #0d1117, #0a1628);
+  color: #c9d1d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #161b22;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 123, 255, 0.3);
+  max-width: 600px;
+}
+
+h1 {
+  color: #58a6ff;
+  margin-bottom: 1.5rem;
+}
+
+.prompt-box {
+  background-color: #21262d;
+  padding: 1.5rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+#promptText {
+  font-size: 1.2rem;
+  color: #c9d1d9;
+  margin-bottom: 1rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+button {
+  background-color: #1f6feb;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2f81f7;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

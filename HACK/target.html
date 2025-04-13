@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Target Setting</title>
+  <link rel="stylesheet" href="/assets/style/target.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎯 Set Your Targets</h1>
+    <form id="targetForm">
+      <input type="text" id="title" placeholder="Target Title" required />
+      <textarea id="description" placeholder="Description" required></textarea>
+      <input type="date" id="deadline" required />
+      <button type="submit">Add Target</button>
+    </form>
+
+    <div id="targetList"></div>
+  </div>
+
+  <script>
+    document.getElementById('targetForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const title = document.getElementById('title').value;
+  const description = document.getElementById('description').value;
+  const deadline = document.getElementById('deadline').value;
+
+  const targetDiv = document.createElement('div');
+  targetDiv.className = 'target';
+
+  targetDiv.innerHTML = `
+    <h3>${title}</h3>
+    <p>${description}</p>
+    <p class="deadline">📅 Deadline: ${deadline}</p>
+    <button onclick="markComplete(this)">✔️ Done</button>
+  `;
+
+  document.getElementById('targetList').appendChild(targetDiv);
+
+  document.getElementById('targetForm').reset();
+});
+
+function markComplete(button) {
+  const parent = button.parentElement;
+  parent.classList.toggle('completed');
+}
+
+  </script>
+</body>
+</html>

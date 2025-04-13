@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 700px;
+    background-color: #161b22;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 123, 255, 0.3);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #58a6ff;
+    margin-bottom: 2rem;
+  }
+  
+  form input, form textarea, form button {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  input, textarea {
+    background-color: #21262d;
+    color: white;
+  }
+  
+  button {
+    background-color: #238636;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2ea043;
+  }
+  
+  #targetList .target {
+    background-color: #21262d;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-top: 1rem;
+    position: relative;
+  }
+  
+  .target.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+  }
+  
+  .target h3 {
+    margin: 0;
+    color: #58a6ff;
+  }
+  
+  .target .deadline {
+    font-size: 0.9rem;
+    color: #8b949e;
+  }
+  
+  .target button {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    background-color: #1f6feb;
+    padding: 0.3rem 0.8rem;
+    border-radius: 8px;
+  }
+  

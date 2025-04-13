@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Motivational Reminder</title>
+  <link rel="stylesheet" href="/assets/style/motivation.css" />
+</head>
+<body>
+  <div class="motivation-container">
+    <h1>💡 Motivational Reminder</h1>
+    <p id="quote">Feeling low? Hit the button for a boost! 🚀</p>
+    <button onclick="getMotivation()">Inspire Me</button>
+  </div>
+
+  <script>
+const quotes = [
+  "You’re doing better than you think. Keep going!",
+  "Success is built on daily discipline, not motivation.",
+  "One step at a time is still progress!",
+  "You have what it takes to get through today.",
+  "Every great journey begins with a single step.",
+  "Push through the discomfort. That’s where growth happens.",
+  "You are stronger than your excuses.",
+  "Small steps every day lead to big results.",
+];
+
+function getMotivation() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  document.getElementById("quote").textContent = quotes[randomIndex];
+}
+
+
+  </script>
+</body>
+</html>

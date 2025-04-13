@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Routine Tracker - Growra</title>
+  <link rel="stylesheet" href="/assets/style/study_tracker.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📅 Study Routine Tracker</h1>
+    <div class="routine-input">
+      <input type="time" id="start-time" placeholder="Start Time">
+      <input type="time" id="end-time" placeholder="End Time">
+      <input type="text" id="subject" placeholder="Subject / Task">
+      <button id="add-session">Add</button>
+    </div>
+
+    <ul id="routine-list"></ul>
+
+    <button id="toggle-mode">🌗Toggle Mode</button>
+  </div>
+
+  <script>
+const form = document.getElementById("study-form");
+const taskList = document.getElementById("taskList");
+const taskInput = document.getElementById("taskInput");
+const timeInput = document.getElementById("timeInput");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const task = taskInput.value.trim();
+  const time = timeInput.value;
+
+  if (task && time) {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <span>${task} at ${time}</span>
+      <button onclick="removeTask(this)">X</button>
+    `;
+    taskList.appendChild(li);
+    taskInput.value = "";
+    timeInput.value = "";
+  }
+});
+
+function removeTask(btn) {
+  btn.parentElement.remove();
+}
+
+
+  </script>
+</body>
+</html>

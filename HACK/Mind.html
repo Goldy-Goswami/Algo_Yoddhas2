@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mindfulness Prompt</title>
+  <link rel="stylesheet" href="/assets/style/Mind.css" />
+</head>
+<body>
+  <div class="mindfulness-container">
+    <h1>🧘‍♀️ Mindfulness Prompt</h1>
+    <p id="prompt">Take a deep breath and click the button for your prompt..🌿🧠</p>
+    <button onclick="showPrompt()">Get Prompt</button>
+  </div>
+
+  <script>
+    const prompts = [
+  "Take a deep breath in... and out. Feel the present moment.",
+  "Close your eyes for 30 seconds and just listen.",
+  "Notice 5 things you can see, 4 you can touch, 3 you can hear, 2 you can smell, 1 you can taste.",
+  "Stretch your body gently. Feel each movement.",
+  "Write down one thing you're grateful for right now.",
+  "Take 3 slow deep breaths. Let go of tension.",
+  "Smile gently — even if you don’t feel like it. Let it shift your mood.",
+  "Put your phone away for 10 minutes. Just be.",
+  "Breathe deeply. Inhale calm, exhale stress.",
+  "You are doing your best — and that is enough.",
+  "Take a pause. Feel the moment. Be present.",
+  "You’re allowed to rest. Your worth isn’t measured by productivity.",
+  "Small steps every day lead to big changes.",
+  "Let go of what you can't control, embrace what you can.",
+  "You have survived 100% of your hardest days.",
+  "Be kind to yourself today. You deserve it.",
+  "Focus on progress, not perfection.",
+  "Peace begins with a single breath."
+];
+
+function showPrompt() {
+  const randomIndex = Math.floor(Math.random() * prompts.length);
+  const promptElement = document.getElementById("prompt");
+  promptElement.textContent = prompts[randomIndex];
+}
+
+  </script>
+</body>
+</html>
